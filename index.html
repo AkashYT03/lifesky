@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIFESKY Minecraft Server</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/server-icon.png" type="image/png">
+</head>
+<body>
+  <!-- Header Section -->
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="LIFESKY Logo">
+    <h1>LIFESKY</h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#vote">Vote</a></li>
+      <li><a href="#store">Store</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Main Content Section -->
+  <main>
+    <section id="home" class="active-section">
+      <h2>Welcome to LIFESKY!</h2>
+      <p>Join our Minecraft server for an amazing survival experience. Inspired by FireMC, we bring you the best gameplay with custom features and a friendly community.</p>
+      <button onclick="connectServer()">Join Server</button>
+    </section>
+
+    <section id="vote">
+      <h2>Vote for LIFESKY</h2>
+      <p>Help us grow by voting for our server on these platforms. Voting rewards you with in-game perks!</p>
+      <div class="vote-links">
+        <a href="https://minecraft-mp.com/server-s340163" target="_blank" class="vote-button">Vote on Minecraft-MP</a>
+        <a href="https://minecraft.buzz/server/13231" target="_blank" class="vote-button">Vote on Minecraft.Buzz</a>
+        <a href="https://best-minecraft-servers.co/server-lifesky-network.27128" target="_blank" class="vote-button">Vote on Best-Minecraft-Servers</a>
+        <a href="https://topminecraftservers.org/server/39843" target="_blank" class="vote-button">Vote on TopMinecraftServers</a>
+      </div>
+    </section>
+
+    <section id="store">
+      <h2>Store</h2>
+      <p>Support the server and unlock awesome perks by purchasing ranks from our store.</p>
+      <div class="rank-list">
+        <div class="rank-card">
+          <h3>VIP</h3>
+          <p class="price">$0.9 / ₹69</p>
+          <button onclick="buyRank('VIP')">Buy Now</button>
+        </div>
+        <div class="rank-card">
+          <h3>PRO</h3>
+          <p class="price">$1.5 / ₹129</p>
+          <button onclick="buyRank('PRO')">Buy Now</button>
+        </div>
+        <div class="rank-card">
+          <h3>MVP</h3>
+          <p class="price">$2.3 / ₹179</p>
+          <button onclick="buyRank('MVP')">Buy Now</button>
+        </div>
+        <div class="rank-card">
+          <h3>ELITE</h3>
+          <p class="price">$3.2 / ₹249</p>
+          <button onclick="buyRank('ELITE')">Buy Now</button>
+        </div>
+        <div class="rank-card">
+          <h3>IMMORTAL</h3>
+          <p class="price">$7 / ₹499</p>
+          <button onclick="buyRank('IMMORTAL')">Buy Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About LIFESKY</h2>
+      <div class="about-content">
+        <div class="about-item">
+          <h3>ALWAYS ONLINE</h3>
+          <p>ʟɪғᴇsᴋʏ ɴᴇᴛᴡᴏʀᴋ ɪs 24/7 ᴏɴʟɪɴᴇ sᴇʀᴠᴇʀ ᴇɴsᴜʀɪɴɢ ʟᴇᴀsᴛ ᴅᴏᴡɴᴛɪᴍᴇ sᴏ ᴘʟᴀʏᴇʀs ᴄᴀɴ ᴇɴᴊᴏʏ ᴀɴʏᴛɪᴍᴇ</p>
+        </div>
+        <div class="about-item">
+          <h3>LIFESTEAL SERVER</h3>
+          <p>ᴇᴠᴇʀʏᴛɪᴍᴇ ʏᴏᴜ ᴋɪʟʟ sᴏᴍᴇᴏɴᴇ ʏᴏᴜ ɢᴀɪɴ ᴀ ʜᴇᴀʀᴛ ᴀɴᴅ ɪғ ʏᴏᴜ ᴅɪᴇ ʏᴏᴜ ʟᴏsᴇ ᴀ ʜᴇᴀʀᴛ</p>
+        </div>
+        <div class="about-item">
+          <h3>FRIENDLY COMMUNITY</h3>
+          <p>ᴏᴜʀ ᴍᴇᴍʙᴇʀs ᴀɴᴅ sᴛᴀғғ ᴀʀᴇ ғʀɪᴇɴᴅʟʏ ᴀɴᴅ ʜᴇʟᴘғᴜʟ, ᴇɴsᴜʀɪɴɢ ɴᴇᴡ ᴘʟᴀʏᴇʀs ᴅᴏɴ'ᴛ ғᴀᴄᴇ ɪssᴜᴇs</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2023 LIFESKY Minecraft Server. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
