@@ -1,26 +1,43 @@
-// Tab Navigation
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-    // Remove active class from all links and sections
-    document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
-    document.querySelectorAll('section').forEach(section => section.classList.remove('active-section'));
+// script.js
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll("nav a");
+    const pages = document.querySelectorAll(".page");
 
-    // Add active class to clicked link and corresponding section
-    this.classList.add('active');
-    document.querySelector(this.getAttribute('href')).classList.add('active-section');
-  });
+    // Function to show the selected page and hide others
+    function showPage(pageId) {
+        pages.forEach((page) => {
+            if (page.id === pageId) {
+                page.classList.add("active");
+            } else {
+                page.classList.remove("active");
+            }
+        });
+    }
+
+    // Add click event listeners to navigation links
+    links.forEach((link) => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault(); // Prevent default link behavior
+            const pageId = this.getAttribute("data-page"); // Get the data-page attribute
+            showPage(pageId); // Show the selected page
+        });
+    });
+
+    // Show the home page by default
+    showPage("home");
 });
 
-// Connect Server Button
-function connectServer() {
-  const ip = "play.lifesky.com"; // Replace with your server IP
-  alert(`Connect to our server at ${ip}`);
-}
+// Search functionality
+function searchContent() {
+    const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+    const sections = document.querySelectorAll(".page");
 
-// Buy Rank Button
-function buyRank(rank) {
-  alert(`Thank you for purchasing the ${rank} rank! Redirecting to the payment page...`);
-  // Replace with your payment link
-  window.location.href = "https://example-store.com";
+    sections.forEach((section) => {
+        const sectionText = section.textContent.toLowerCase();
+        if (sectionText.includes(searchTerm)) {
+            section.style.display = "block"; // Show matching section
+        } else {
+            section.style.display = "none"; // Hide non-matching sections
+        }
+    });
 }
