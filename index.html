@@ -1,104 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LIFESKY Minecraft Server</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="images/server-icon.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFF03GAMER</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header Section -->
-<header>
-  <div class="logo">
-    <img src="logo.png" alt="LIFESKY Logo">
-    <h1>LIFESKY</h1>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#vote">Vote</a></li>
-      <li><a href="#store">Store</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-  </nav>
-</header>
+    <header>
+        <div class="logo">
+            <img src="mff03.png" alt="MFF03GAMER Logo">
+            <h1>MFF03GAMER</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="searchContent()">🔍</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" data-page="home">🏠 Home</a></li>
+                <li><a href="#" data-page="plugin">🔌 Plugin</a></li>
+                <li><a href="#" data-page="files">📂 Files</a></li>
+                <li><a href="#" data-page="map">🗺️ Map</a></li>
+                <li><a href="#" data-page="about">ℹ️ About</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Main Content Section -->
-  <main>
-    <section id="home" class="active-section">
-      <h2>Welcome to LIFESKY!</h2>
-      <p>Join our Minecraft server for an amazing survival experience. Inspired by FireMC, we bring you the best gameplay with custom features and a friendly community.</p>
-      <button onclick="connectServer()">Join Server</button>
-    </section>
+    <main id="content">
+        <!-- Home Section -->
+        <section id="home" class="page active">
+            <h2>Welcome to MFF03GAMER!</h2>
+            <p>
+                🎮 Your one-stop destination for all things Minecraft! Whether you're a pro player or just starting out, we've got something exciting for you. Dive into plugins, explore maps, download files, and stay updated with the latest Minecraft trends. Let's level up your gaming experience! 🚀
+            </p>
+        </section>
 
-    <section id="vote">
-      <h2>Vote for LIFESKY</h2>
-      <p>Help us grow by voting for our server on these platforms. Voting rewards you with in-game perks!</p>
-      <div class="vote-links">
-        <a href="https://minecraft-mp.com/server-s340163" target="_blank" class="vote-button">Vote on Minecraft-MP</a>
-        <a href="https://minecraft.buzz/server/13231" target="_blank" class="vote-button">Vote on Minecraft.Buzz</a>
-        <a href="https://best-minecraft-servers.co/server-lifesky-network.27128" target="_blank" class="vote-button">Vote on Best-Minecraft-Servers</a>
-        <a href="https://topminecraftservers.org/server/39843" target="_blank" class="vote-button">Vote on TopMinecraftServers</a>
-      </div>
-    </section>
+        <!-- Plugin Section -->
+        <section id="plugin" class="page">
+            <h2>Plugins - Power Up Your Game!</h2>
+            <p>
+                🔌 Enhance your Minecraft experience with our handpicked plugins! From game-changing mods to server optimizations, we bring you the best tools to make your gameplay smoother and more fun. Check out our latest plugin updates and tutorials to stay ahead in the game! ⚡
+            </p>
+        </section>
 
-    <section id="store">
-      <h2>Store</h2>
-      <p>Support the server and unlock awesome perks by purchasing ranks from our store.</p>
-      <div class="rank-list">
-        <div class="rank-card">
-          <h3>VIP</h3>
-          <p class="price">$0.9 / ₹69</p>
-          <button onclick="buyRank('VIP')">Buy Now</button>
-        </div>
-        <div class="rank-card">
-          <h3>PRO</h3>
-          <p class="price">$1.5 / ₹129</p>
-          <button onclick="buyRank('PRO')">Buy Now</button>
-        </div>
-        <div class="rank-card">
-          <h3>MVP</h3>
-          <p class="price">$2.3 / ₹179</p>
-          <button onclick="buyRank('MVP')">Buy Now</button>
-        </div>
-        <div class="rank-card">
-          <h3>ELITE</h3>
-          <p class="price">$3.2 / ₹249</p>
-          <button onclick="buyRank('ELITE')">Buy Now</button>
-        </div>
-        <div class="rank-card">
-          <h3>IMMORTAL</h3>
-          <p class="price">$7 / ₹499</p>
-          <button onclick="buyRank('IMMORTAL')">Buy Now</button>
-        </div>
-      </div>
-    </section>
+        <!-- Files Section -->
+        <section id="files" class="page">
+            <h2>Files - Download & Play!</h2>
+            <p>
+                📂 Looking for the perfect resource pack, mod, or map? You're in the right place! Download high-quality files curated just for you. Whether it's survival kits, PvP tools, or creative builds, we've got everything you need to take your Minecraft world to the next level. 🛠️
+            </p>
+        </section>
 
-    <section id="about">
-      <h2>About LIFESKY</h2>
-      <div class="about-content">
-        <div class="about-item">
-          <h3>ALWAYS ONLINE</h3>
-          <p>ʟɪғᴇsᴋʏ ɴᴇᴛᴡᴏʀᴋ ɪs 24/7 ᴏɴʟɪɴᴇ sᴇʀᴠᴇʀ ᴇɴsᴜʀɪɴɢ ʟᴇᴀsᴛ ᴅᴏᴡɴᴛɪᴍᴇ sᴏ ᴘʟᴀʏᴇʀs ᴄᴀɴ ᴇɴᴊᴏʏ ᴀɴʏᴛɪᴍᴇ</p>
-        </div>
-        <div class="about-item">
-          <h3>LIFESTEAL SERVER</h3>
-          <p>ᴇᴠᴇʀʏᴛɪᴍᴇ ʏᴏᴜ ᴋɪʟʟ sᴏᴍᴇᴏɴᴇ ʏᴏᴜ ɢᴀɪɴ ᴀ ʜᴇᴀʀᴛ ᴀɴᴅ ɪғ ʏᴏᴜ ᴅɪᴇ ʏᴏᴜ ʟᴏsᴇ ᴀ ʜᴇᴀʀᴛ</p>
-        </div>
-        <div class="about-item">
-          <h3>FRIENDLY COMMUNITY</h3>
-          <p>ᴏᴜʀ ᴍᴇᴍʙᴇʀs ᴀɴᴅ sᴛᴀғғ ᴀʀᴇ ғʀɪᴇɴᴅʟʏ ᴀɴᴅ ʜᴇʟᴘғᴜʟ, ᴇɴsᴜʀɪɴɢ ɴᴇᴡ ᴘʟᴀʏᴇʀs ᴅᴏɴ'ᴛ ғᴀᴄᴇ ɪssᴜᴇs</p>
-        </div>
-      </div>
-    </section>
-  </main>
+        <!-- Map Section -->
+        <section id="map" class="page">
+            <h2>Maps - Explore New Worlds!</h2>
+            <p>
+                🗺️ Ready for an adventure? Discover amazing Minecraft maps that will take you to uncharted territories, challenging dungeons, and breathtaking landscapes. Whether you're into survival, puzzle-solving, or just exploring, our maps will keep you hooked for hours! 🌍
+            </p>
+        </section>
 
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2023 LIFESKY Minecraft Server. All rights reserved.</p>
-  </footer>
+        <!-- About Section -->
+        <section id="about" class="page">
+            <h2>About MFF03GAMER</h2>
+            <p>
+                <strong>MFF03GAMER – Your Ultimate Minecraft Hub!</strong><br><br>
+                Welcome to MFF03GAMER, a gaming channel dedicated to everything Minecraft! Whether you're into intense PvP battles, survival challenges, or the latest Minecraft updates, this channel has it all.
+                <br><br>
+                ✅ <strong>Minecraft Updates</strong> – Stay updated with the newest features, snapshots, and official releases.<br>
+                ✅ <strong>Aternos Updates & Plugins</strong> – Get the latest news and tutorials on Aternos server updates, plugins, and server management.<br>
+                ✅ <strong>SMP Promotions</strong> – Looking to join an SMP (Survival Multiplayer) server? We showcase and promote amazing SMPs for you to explore.<br>
+                ✅ <strong>PvP & Survival Gameplay</strong> – Watch epic fights, clutch moments, and creative survival content.
+                <br><br>
+                Subscribe now and level up your Minecraft experience with MFF03GAMER! 🚀🎮
+            </p>
+        </section>
+    </main>
 
-  <script src="script.js"></script>
+    <footer>
+        <div class="social-media">
+            <a href="https://www.youtube.com/MFF03GAMER" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/MFF03GAMER" target="_blank">Instagram</a>
+            <a href="https://discord.gg/MFF03GAMER" target="_blank">Discord</a>
+        </div>
+        <p>&copy; 2023 MFF03GAMER. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
